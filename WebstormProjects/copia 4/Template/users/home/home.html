@@ -1,0 +1,42 @@
+<div>
+    <div class="container" id="homeTop">
+        <legend id="tituloDatosUsuario">Usuarios</legend>
+        <div class="form-group col-md-6">
+            <label  for="tipoUsuario">Tipo Usuario</label>
+            <div class="col-md-2">
+                <select id="tipoUsuario" name="tipoUsuario" class="form-control" ng-change="mostrarLista()" ng-model="valorSelect">
+                    <option value="N" selected>Todos</option>
+                    <option value="Profesor" >Profesor</option>
+                    <option value="Tecnico" >Tecnico</option>
+                    <option value="Operador" >Operador</option>
+                    <option value="Administrador" >Adinismtrador</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="row col-md-8 col-md-offset-1 custyle" id="cuadroTop">
+            <table class="table table-striped custab">
+                <thead>
+                <a href="#/user/crear" class="btn btn-primary btn-xs pull-right"><b>+</b> Agregar Usuario</a>
+                <tr>
+                    <th>Nombre Usuario</th>
+                    <th>Nombre Completo</th>
+                    <th class="text-center">Action</th>
+                </tr>
+                </thead>
+                <tr ng-repeat="persona in personas | orderBy : 'apellido1'">
+                    <td>{{persona.nombreUsuario}}</td>
+                    <td>{{persona.apellido1}}{{' '}}{{persona.apellido2}}{{' '}}{{persona.nombre}}</td>
+                    <td class="text-center">
+                        <a href="#/user/editar/{{persona.nombreUsuario}}" class='btn btn-info btn-xs'>
+                            <span class="glyphicon glyphicon-edit"></span>Edit
+                        </a>
+                        <button class="btn btn-danger btn-xs" ng-click="eliminar(persona.nombreUsuario)">
+                            <span class="glyphicon glyphicon-remove"></span>Del
+                        </button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>

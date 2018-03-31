@@ -1,0 +1,100 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.pruebas.mantenimiento_administrador.reportesMainFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center">
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|top">
+
+
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="16dp"
+                android:stretchColumns="1">
+
+                <TableRow>
+
+                    <RadioButton
+                        android:layout_column="0"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/reportesMainNuevos"
+                        android:id="@+id/reportesMainRadioButtonNuevos"
+                        android:checked="true"
+                        android:layout_weight="1"
+                        android:padding="3dip"
+                        />
+
+                    <RadioButton
+                        android:layout_column="2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/reportesMainPriorizados"
+                        android:id="@+id/reportesMainRadioButtonPriorizados"
+                        android:checked="false"
+                        android:layout_weight="1"
+                        android:padding="3dip"/>
+
+
+                </TableRow>
+                <TableRow>
+
+                    <RadioButton
+                        android:layout_column="0"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/reportesMainEnProceso"
+                        android:id="@+id/reportesMainRadioButtonEnProceso"
+                        android:checked="false"
+                        android:layout_weight="1"
+                        android:padding="3dip"
+                        />
+
+                    <RadioButton
+                        android:layout_column="2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/reportesMainFinalizados"
+                        android:id="@+id/reportesMainRadioButtonFinalizados"
+                        android:checked="false"
+                        android:layout_weight="1"
+                        android:padding="3dip" />
+
+
+                </TableRow>
+
+                <View
+                    android:layout_height="2dip"
+                    android:background="#FF909090" />
+            </TableLayout>
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/reportesMainListaReportes"
+            android:id="@+id/reportesMainLabelListaReportes"
+            android:layout_gravity="center_horizontal|top" />
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/reportesMainListViewReportes"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/colorListView"/>
+    </LinearLayout>
+</FrameLayout>

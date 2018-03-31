@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">ClaseUnoLenguajesAndroid</string>
+
+    <string name="stringPrimerValor">Digite the first value</string>
+    <string name="stringSumar">Add</string>
+    <string name="stringSegundoValor">Digite the second value</string>
+    <string name="stringResultado">Result:  </string>
+</resources>

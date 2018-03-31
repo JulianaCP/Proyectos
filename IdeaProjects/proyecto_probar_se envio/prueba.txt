@@ -1,0 +1,38 @@
+#Código de prueba para Análisis Sintáctico
+
+#Calcular factorial
+num=0
+def calcularFac(num):
+    num_aux = 0
+    if (num < 1):
+        num_aux = 1
+    else:
+        num_aux = num * 5
+    return num_aux
+
+ventas = [100,200,300,400,500]
+
+#promedio de elementos
+variable = "variable string"
+
+def promedio(variable):
+    tam = len(variable)
+    resultado=0
+
+    #ciclo para recorrer arreglo
+    cont = 0
+    sumatoria = 0
+    while (cont <= tam):
+        sumatoria = sumatoria + ventas[0]
+    if tam > 0:
+        resultado = sumatoria / tam
+    else:
+        resultado = sumatoria / tam
+    return resultado
+
+def calcularpromedioventas():
+    prom = promedio("var")
+
+"""
+print("hola mundo de calcular")
+"""

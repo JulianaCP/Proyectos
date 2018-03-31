@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/style/css/crear.css">
+    <link rel="stylesheet" href="../../assets/style/css/nav.css">
+</head>
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container">
+            <div class="navbar-header">
+                <img  width="250px" top="110px" src="../../assets/style/img/logoTec.png"/>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-collapse-3">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">Pagina Principal</a></li>
+                    <li><a href="#">Notificaciones</a></li>
+                    <li>
+                        <a class="btn btn-default btn-outline btn-circle collapsed" href="#">Salir</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container" id="margen" ng-controller="crearController">
+        <form class="form-horizontal" ng-submit="crear()">
+            <legend id="tituloDatosUsuario">Crear Usuario</legend>
+            <fieldset>
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="tipoUsuario">Tipo Usuario</label>
+                    <div class="col-md-4">
+                        <select id="tipoUsuario" name="tipoUsuario" class="form-control">
+                            <option value="Profesor" selected="true">Profesor</option>
+                            <option value="Tecnico">Tecnico</option>
+                            <option value="Operador">Operador</option>
+                            <option value="Administrador">Administrador</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="nombre">Nombre</label>
+                    <div class="col-md-4">
+                        <input id="nombre" name="nombre" type="text" placeholder="Nombre" class="form-control input-md" required="">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="Apellido1">Primer Apellido</label>
+                    <div class="col-md-4">
+                        <input id="Apellido1" name="Apellido1" type="text" placeholder="Primer Apellido" class="form-control input-md" required="">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="Apellido2">Segundo Apellido</label>
+                    <div class="col-md-4">
+                        <input id="Apellido2" name="Apellido2" type="text" placeholder="Segundo Apellido" class="form-control input-md" required="">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="nombreUsuario">Nombre Usuario</label>
+                    <div class="col-md-4">
+                        <input id="nombreUsuario" name="nombreUsuario" type="text" placeholder="nombreUsuario" class="form-control input-md" required="">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="contrasena">Contraseña </label>
+                    <div class="col-md-4">
+                        <input id="contrasena" name="contrasena" type="password" placeholder="Contraseña " class="form-control input-md" required="">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="confirmarContrasena">Confirmar Contraseña </label>
+                    <div class="col-md-4">
+                        <input id="confirmarContrasena" name="confirmarContrasena" type="password" placeholder="Confirmar contraseña " class="form-control input-md" required="">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="telefono">Telefono</label>
+                    <div class="col-md-4">
+                        <input id="telefono" name="telefono" type="text" placeholder="Telefono " class="form-control input-md" required="">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="correo">Correo</label>
+                    <div class="col-md-4">
+                        <input id="correo" name="correo" type="text" placeholder="Correo " class="form-control input-md" required="">
+
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="buttonDatos"></label>
+                    <div class="col-md-8">
+                        <button type="submit" class="btn btn-danger m-t-18 waves-effect">Reservar</button>
+                        <button type="submit" id="buttonDatos" name="crear" class="btn btn-success buttonDatos">Crear</button>
+                        <button id="cancelar" name="cancelar" class="btn btn-danger buttonDatos">Cancelar</button>
+                    </div>
+                </div>
+
+            </fieldset>
+        </form>
+
+    </div>
+</body>
+</html>

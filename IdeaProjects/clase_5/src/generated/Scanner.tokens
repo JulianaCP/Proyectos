@@ -1,0 +1,10 @@
+PyCOMA=1
+TINT=2
+TSTRING=3
+ID=4
+ASIGN=5
+NUM=6
+';'=1
+'INT'=2
+'STRING'=3
+'='=5

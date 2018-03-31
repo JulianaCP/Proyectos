@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html ng-app="mantenimientoApp">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../assets/style/css/login.css">
+
+    <title>Login</title>
+</head>
+<body>
+    <div class="acomodar">
+        <img  width="250px" top="110px" src="../../assets/style/img/logoTec.png"/>
+    </div>
+    <div id="loginBody">
+        <div class="thumbnail">
+            <div class="login-page">
+                <div>
+                    <h2 id="fuente">Mantenimiento</h2>
+                </div>
+                <div class="form">
+                    <form class="register-form">
+                        <input type="text" placeholder="name"/>
+                        <input   type="password" placeholder="password"/>
+                        <input type="text"   placeholder="email address"/>
+                        <button >create</button>
+                        <p class="message">Already registered? <a href="#">Sign In</a></p>
+                    </form>
+                    <form class="login-form">
+                        <input type="text" id="email" name="email" placeholder="username"/>
+                        <input type="password" id="pass" name="pass" placeholder="password"/>
+                        <button ng-click="hola()">login</button>
+                        <p class="message">Not registered? <a href="#">Create an account</a></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

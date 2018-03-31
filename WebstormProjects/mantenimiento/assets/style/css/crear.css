@@ -1,0 +1,13 @@
+#tituloDatosUsuario{
+    text-align: center;
+    padding-top: 2%;
+}
+#margen{
+    border: 1px solid lightgray;
+    margin-bottom: 1%;
+}
+.buttonDatos{
+
+    padding-left: 8%;
+    padding-right: 8%;
+}

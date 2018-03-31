@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html ng-app="loginModule">
+<head>
+    <meta charset="UTF-8">
+    <title>TransporTec</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Compiled and minified CSS -->
+
+    <link rel="stylesheet" href="appWeb/public/CSS/style.css">
+    <link rel="stylesheet" href="lib/pnotify/pnotify.custom.min.css">
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <!-- Angular-ui-calendar -->
+    <link rel="stylesheet" href="bower_components/fullcalendar/dist/fullcalendar.css"/>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
+
+
+
+
+    <!-- Bootstrap Core Css -->
+
+
+    <!-- AdminBSB Themes. You can choose a theme from css/themes instead of get all themes -->
+    <link href="assets/css/themes/theme-blue.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/mediaQueries.css">
+
+</head>
+
+<body id="loginBody" ng-controller="loginController">
+<!--<nav class="navbar white">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a href="javascript:void(0);" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false"></a>
+            <a href="javascript:void(0);" class="bars"></a>
+            <a class="navbar-brand " >
+                <img src="assets/images/TEC-logo-blanco.png">
+            </a>
+
+        </div>
+        <div class="collapse navbar-collapse" id="navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <!-- Call Search
+                <li class="pull-right"><a href="javascript:void(0);" class="js-right-sidebar" data-close="true"><i class="material-icons">more_vert</i></a></li>
+            </ul>
+        </div>
+    </div>
+</nav>-->
+<div class="acomodar">
+    <img  width="250px" top="110px" src="appWeb/public/images/tec.png"/>
+
+</div>
+
+<div class="thumbnail">
+    <div>
+        <h2 id="fuente">OdontologíaTEC</h2>
+    </div>
+    <div class="login-page">
+
+        <div class="form">
+            <form class="register-form">
+                <input type="text" placeholder="name"/>
+                <input   type="password" placeholder="password"/>
+                <input type="text"   placeholder="email address"/>
+                <button >create</button>
+                <p class="message">Already registered? <a href="#">Sign In</a></p>
+            </form>
+            <form class="login-form">
+                <input type="text" id="email" name="email" placeholder="username"/>
+                <input type="password" id="pass" name="pass" placeholder="password"/>
+                <button ng-click="log()">login</button>
+                <p class="message">Not registered? <a href="#">Create an account</a></p>
+            </form>
+        </div>
+    </div>
+
+</div>
+
+    <script src="shared/common.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+    <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+    <script type="text/javascript" src="bower_components/angular-resource/angular-resource.min.js"></script>
+    <script type="text/javascript" src="bower_components/angular-route/angular-route.min.js"></script>
+    <script type="text/javascript" src="lib/pnotify/pnotify.custom.min.js"></script>
+    <script type="text/javascript" src="lib/pnotify/angular-pnotify.js"></script>
+<script type="text/javascript" src="lib/AngularJS/angular-base64.min.js"></script>
+
+    <script src="loginController.js"></script>
+    <script type="text/javascript" src="appWeb/comun/notificaciones.js"></script>
+
+</body>
+</html>

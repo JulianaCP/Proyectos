@@ -1,0 +1,11 @@
+def promedio(valor):
+    while(true):
+        r = promedio(1)
+def Main():
+    promedio(5)
+
+
+
+
+
+

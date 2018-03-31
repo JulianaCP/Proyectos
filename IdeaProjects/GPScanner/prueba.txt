@@ -1,0 +1,7 @@
+INT x,a,b;
+INT x;
+STRING y;
+x10;
+b="hola";
+y="hola mundo" * "cruel";
+y=10;

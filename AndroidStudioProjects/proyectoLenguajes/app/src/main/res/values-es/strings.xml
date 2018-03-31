@@ -1,0 +1,70 @@
+<resources>
+    <string name="app_name">proyectoLenguajes</string>
+    <string name="prueba">Hola</string>
+
+
+
+    <string name="loginLabelLogin">Iniciar Sesion</string>
+    <string name="loginLabelUserName">Nombre Usuario</string>
+    <string name="loginLabelPassword">Contraseña</string>
+    <string name="loginButtonRegistrarse">Registrarse</string>
+    <string name="loginButtonAceptar">Aceptar</string>
+
+
+
+    <string name="registroLabelTitulo">Registrarse</string>
+    <string name="registroLabelNombre">Nombre</string>
+    <string name="registroLabelUser">Nombre Usuario</string>
+    <string name="registroLabelContraseña">Contraseña</string>
+    <string name="registroLabelTelefono">Telefono</string>
+    <string name="registroLabelUserType">Tipo de Usuario</string>
+    <string name="registroRadioButtonUserTypeCliente">Cliente</string>
+    <string name="registroRadioButtonUserTypeAdministrador">Administrador</string>
+    <string name="registroLabelDepartamento">Departamento</string>
+    <string name="registroLabelSalario">Salario</string>
+    <string name="registroLabelCedula">Cedula</string>
+    <string name="registroButtonAceptar">Aceptar</string>
+
+
+    <string name="appAdminLabelTituloProductos">Lista productos</string>
+    <string name="appAdminLabelTituloOpcionMenuUno">Lista de Usuarios</string>
+    <string name="appAdminLabelTituloOpcionMenuDos">Agregar Producto</string>
+
+
+    <string name="appAdminLabelTituloOpcionPopuMenuUno">Editar</string>
+    <string name="appAdminLabelTituloOpcionPopuMenuDos">Eliminar</string>
+
+
+
+
+    <string name="appAdminLabelTituloEditarProducto">Editar Producto</string>
+    <string name="appAdminLabelDescripcionEditarProducto">Descripcion</string>
+    <string name="appAdminLabelPrecioEditarProducto">Precio</string>
+    <string name="appAdminLabelCantidadEditarProducto">Cantidad</string>
+    <string name="appAdminLabelNombreEditarProducto">Nombre</string>
+    <string name="appAdminButtonGuardarEditarProducto">Guardar</string>
+    <string name="appAdminButtonCancelarEditarProducto">CAncelar</string>
+
+
+
+
+    <string name="appAdminLabelTituloAgregarProducto">Agregar Producto</string>
+    <string name="appAdminLabelDescripcionAgregarProducto">Descripcion</string>
+    <string name="appAdminLabelPrecioAgregarProducto">Precio</string>
+    <string name="appAdminLabelCantidadAgregarProducto">Cantidad</string>
+    <string name="appAdminLabelNombreAgregarProducto">Nombre</string>
+    <string name="appAdminButtonGuardarAgregarProducto">Guardar</string>
+    <string name="appAdminButtonCancelarAgregarProducto">Cancelar</string>
+
+
+    <string name="appAdminLabelTituloListaUsuarios">Lista Usuarios</string>
+    <string name="appAdminButtonEditarListaUsuarios">Editar</string>
+    <string name="appAdminButtonLlamarListaUsuarios">Llamar</string>
+    <string name="appAdminButtonEliminarListaUsuarios">Eliminar</string>
+    <string name="appAdminLabelAgregarListaUsuarios">Agregar Usuario</string>
+
+    <string name="appClienteLabelSalir">Salir</string>
+    <string name="appClienteLabelListaProductos">Lista Productos</string>
+
+
+</resources>

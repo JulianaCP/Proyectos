@@ -1,0 +1,103 @@
+<resources>
+    <string name="app_name">Mantenimiento TEC</string>
+    <string name="nombre_aplicacion">Mantenimiento TEC</string>
+
+    <!-- Buttons -->
+    <string name="buttonAceptar">Aceptar</string>
+    <string name="buttonCancelar">Cancelar</string>
+    <string name="buttonIniciar">Iniciar</string>
+
+
+    <!-- Buttons -->
+    <string name="importanciaReporteAlto">Alto</string>
+    <string name="importanciaReporteMedio">Medio</string>
+    <string name="importanciaReporteBajo">Bajo</string>
+
+
+    <!-- login -->
+    <string name="loginLabelMantenimiento">Mantenimiento</string>
+    <string name="loginLabelNombreUsuario">Nombre Usuario</string>
+    <string name="loginLabelContrasenna">Contraseña</string>
+    <string name="loginButtonIniciarSesion">Iniciar Sesión</string>
+    <string name="title_activity_home">home</string>
+    <string name="login_checkbox_sesion_activa">Recordar Sesión</string>
+
+    <!-- nav_menu : activity_nav_menu_drawer -->
+    <string name="nav_menu_opcion_administracion">Administración</string>
+    <string name="nav_menu_opcion_home">Home</string>
+    <string name="nav_menu_opcion_cerrar_sesion">Cerrar Sesión</string>
+
+    <!--  resportesMainFragment -->
+    <string name="reportesMainListaReportes">Lista Reportes</string>
+    <string name="reportesMainNuevos">Nuevos</string>
+    <string name="reportesMainPriorizados">Priorizados</string>
+    <string name="reportesMainEnProceso">En proceso</string>
+    <string name="reportesMainFinalizados">Finalizados</string>
+
+    <!--  componente navigation drawer -->
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_settings">Settings</string>
+
+    <!--  reporte-->
+
+    <string name="reporteId">Id: </string>
+    <string name="reportePrioridad">Prioridad: </string>
+    <string name="reporteFechaReporte">Fecha reporte: </string>
+    <string name="reporteFechaFinalizacion">Fecha finalización: </string>
+    <string name="reporteDescripcion">Descripción: </string>
+    <string name="reporteSolicitante">Solicitante: </string>
+    <string name="reporteLugar">Lugar: </string>
+
+
+    <!-- detalle reporte -->
+
+    <string name="detalleReporteTitulo">Detalle Reporte</string>
+    <string name="detalleReporteMenuOpciones">Menu opciones</string>
+
+
+    <!-- detalle reporte opciones -->
+    <string name="detalleReporteOpcionesNuevoMasInformacion">+</string>
+    <string name="detalleReporteOpcionesNuevoPriorizar">Priorizar</string>
+    <string name="detalleReporteOpcionesNuevoDenegar">Denegar</string>
+
+    <string name="detalleReporteOpcionesEnProcesoVerEstado">Ver Estado</string>
+    <string name="detalleReporteOpcionesEnProcesoFinalizar">Finalizar</string>
+
+    <string name="detalleReporteOpcionesPriorizadoEditarPrioridad">Editar Prioridad</string>
+    <string name="detalleReporteOpcionesPriorizadoIniciar">Iniciar</string>
+
+
+    <!-- reportes main popup -->
+
+
+    <string name="reportesMainPopup_Priorizados_fecha">Fecha</string>
+    <string name="reportesMainPopup_Priorizados_admin">Estado</string>
+
+    <string name="reportesMainPopup_Terminados_cancelados">Cancelados</string>
+    <string name="reportesMainPopup_Terminados_Finalizados">Finalizados</string>
+
+
+    <!-- reporte estado nuevo mas informacion -->
+    <string name="reporteEstadoNuevoMasInformacionTitulo">Mas Información</string>
+    <string name="reporteEstadoNuevoMasInformacionSolicitar">Solicitar</string>
+
+
+    <!-- reporte estado nuevo priorizar  -->
+    <string name="reporteEstadoNuevoPriorizarDefinirFecha">Definir Fecha:</string>
+    <string name="reporteEstadoNuevoPriorizarImportancia">Importancia:</string>
+
+    <!-- reporte estado priorizado iniciar  -->
+    <string name="reporteEstadoPriorizadoIniciarTitulo">Asignar Técnicos</string>
+    <string name="reporteEstadoPriorizadoIniciarTecnicos">Técnicos</string>
+    <string name="reporteEstadoPriorizadoIniciarAsignados">Asignados</string>
+
+
+    <!-- estado nuevo priorizado iniciar popup -->
+    <string name="estadoNuevoPriorizadoPopup_Tecnicos_Asignar">Asignar</string>
+    <string name="estadoNuevoPriorizadoPopup_Asignados_Eliminar">Eliminar</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

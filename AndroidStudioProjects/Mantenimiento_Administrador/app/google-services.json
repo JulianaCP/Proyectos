@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "562869354016",
+    "firebase_url": "https://mantenimientotec-2baf7.firebaseio.com",
+    "project_id": "mantenimientotec-2baf7",
+    "storage_bucket": "mantenimientotec-2baf7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:562869354016:android:8356e856717c2244",
+        "android_client_info": {
+          "package_name": "com.example.pruebas.mantenimiento_administrador"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "562869354016-9aspumnr1k6kvjlbufmqmlvo2r1rhphe.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.pruebas.mantenimiento_administrador",
+            "certificate_hash": "3058adafd9d4a1707cb22a60ea00899ddd503454"
+          }
+        },
+        {
+          "client_id": "562869354016-vh7r5dhm64bttr3v53oi7gifgahfdkpn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAxNyIFJf17uhX4c59WG-0UcouGprumPC8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "562869354016-vh7r5dhm64bttr3v53oi7gifgahfdkpn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

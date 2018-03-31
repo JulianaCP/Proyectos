@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:stretchColumns="1">
+
+        <TableRow>
+
+
+            <TextView
+                android:layout_column="0"
+                android:padding="3dip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/reporteId"
+                android:id="@+id/reportes_main_componente_label_titulo_id"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:layout_column="2"
+                android:padding="3dip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="serId"
+                android:id="@+id/reportes_main_componente_label_ser_id"
+                android:layout_weight="1"/>
+        </TableRow>
+
+        <TableRow>
+
+
+            <TextView
+                android:layout_column="0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/reporteSolicitante"
+                android:id="@+id/reportes_main_componente_label_titulo_solicitante"
+                android:layout_weight="1"
+                android:padding="3dip"/>
+
+            <TextView
+                android:layout_column="2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="serSolicitante"
+                android:id="@+id/reportes_main_componente_label_ser_solicitante"
+                android:layout_weight="1"
+                android:padding="3dip"/>
+        </TableRow>
+        <TableRow>
+
+
+            <TextView
+                android:layout_column="0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/reporteLugar"
+                android:id="@+id/reportes_main_componente_label_titulo_lab"
+                android:layout_weight="1"
+                android:padding="3dip"/>
+
+            <TextView
+                android:layout_column="2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="serLaboratorio"
+                android:id="@+id/reportes_main_componente_label_ser_lab"
+                android:layout_weight="1"
+                android:padding="3dip"/>
+        </TableRow>
+    </TableLayout>
+</LinearLayout>

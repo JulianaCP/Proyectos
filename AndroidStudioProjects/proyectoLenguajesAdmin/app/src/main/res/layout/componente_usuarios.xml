@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="132dp"
+        android:layout_weight="0.19">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:id="@+id/textView15EspacioListaUsuarios"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Small Text"
+            android:id="@+id/textViewNombreComponene"
+            android:layout_below="@+id/textView15EspacioListaUsuarios"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Small Text"
+            android:id="@+id/textViewLoginComponente"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textViewNombreComponene" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Small Text"
+            android:id="@+id/textViewFechaRegistroComponente"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textViewLoginComponente" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Small Text"
+            android:id="@+id/textViewFechaUltimoLoginComponente"
+            android:layout_below="@+id/textViewFechaRegistroComponente" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:id="@+id/textView15EspacioComponente"
+            android:layout_below="@+id/textViewFechaUltimoLoginComponente"
+            android:layout_alignEnd="@+id/textViewFechaRegistroComponente" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:id="@+id/textView21EspacioComponente"
+            android:layout_below="@+id/textView15EspacioComponente"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:id="@+id/textView28EspacioComponente"
+            android:layout_below="@+id/textView21EspacioComponente"
+            android:layout_alignEnd="@+id/textViewFechaRegistroComponente" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Button"
+            android:id="@+id/buttonComponenteEditar"
+            android:layout_alignTop="@+id/buttonComponenteEliminar"
+            android:layout_toStartOf="@+id/buttonComponenteLlamar" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Button"
+            android:id="@+id/buttonComponenteEliminar"
+            android:layout_alignTop="@+id/textViewNombreComponene"
+            android:layout_toEndOf="@+id/buttonComponenteEditar" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Button"
+            android:id="@+id/buttonComponenteLlamar"
+            android:layout_above="@+id/textView28EspacioComponente"
+            android:layout_alignParentEnd="true" />
+
+    </RelativeLayout>
+</LinearLayout>

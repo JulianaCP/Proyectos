@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html ng-app="loginModule">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="assets/style/css/login.css">
+    <title>Login</title>
+    <link rel="stylesheet" href="lib/Bootstrap/css/bootstrap.min.css"><!--Boostrap..-->
+    <link rel="stylesheet" href="lib/Icons/css/font-awesome.min.css"><!--Iconos..-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+
+</head>
+<body>
+<div class="acomodar">
+    <img  width="250px" top="110px" src="assets/style/img/logoTec.png"/>
+</div>
+<div id="loginBody">
+    <div class="thumbnail">
+        <div class="login-page">
+            <div>
+                <h2 id="fuente">Mantenimiento</h2>
+            </div>
+            <div class="form">
+                <form class="register-form">
+                    <input type="text" placeholder="name"/>
+                    <input   type="password" placeholder="password"/>
+                    <input type="text"   placeholder="email address"/>
+                    <button >create</button>
+                    <p class="message">Already registered? <a href="#">Sign In</a></p>
+                </form>
+                <form class="login-form">
+                    <div ng-controller="loginController">
+                        <input type="text" id="email" name="email" placeholder="username"ng-model="username"/>
+                        <input type="password" id="pass" name="pass" placeholder="password" ng-model="password"/>
+                        <button ng-click="accederLogin()">Login</button>
+                    </div>
+                    <div ng-app="mantenimientoApp">
+                        <p class="message">Not registered? <a href="#">Create an account</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="/js/bootstrap.js"></script>
+
+
+<script type="text/javascript" src="lib/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="lib/AngularJS/angular-resource/angular-resource.min.js"></script>
+<script type="text/javascript" src="lib/AngularJS/angular.min.js"></script>
+<script type="text/javascript" src="lib/AngularJS/angular-route.min.js"></script>
+<script type="text/javascript" src="lib/AngularJS/angular.js"></script>
+<script type="text/javascript" src="lib/AngularJS/angular-base64.min.js"></script>
+
+
+<script src="lib/Bootstrap/js/bootstrap.min.js"></script>
+<script src="lib/Bootstrap/js/bootstrap.js"></script>
+
+<!--Adding controllers -->
+<script src="index.js"></script>
+
+</body>
+</html>

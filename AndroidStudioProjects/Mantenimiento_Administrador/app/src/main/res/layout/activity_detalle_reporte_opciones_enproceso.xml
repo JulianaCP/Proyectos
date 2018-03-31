@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:text="@string/detalleReporteOpcionesEnProcesoVerEstado"
+        android:id="@+id/detalle_reporte_opciones_enProceso_estado"
+        android:layout_weight="1"/>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:text="@string/detalleReporteOpcionesEnProcesoFinalizar"
+        android:id="@+id/detalle_reporte_opciones_enProceso_finalizar"
+        android:layout_weight="1"/>
+</LinearLayout>

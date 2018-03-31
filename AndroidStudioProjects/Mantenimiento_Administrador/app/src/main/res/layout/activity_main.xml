@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical"
+android:padding="48dp">
+
+<TextView
+    android:id="@+id/loginLabelMantenimiento"
+    android:layout_width="wrap_content"
+    android:layout_height="0dp"
+    android:layout_gravity="center_horizontal"
+    android:layout_weight="1"
+    android:text="@string/loginLabelMantenimiento"
+    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+<EditText
+    android:id="@+id/loginInputNombreUsuario"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_gravity="center_horizontal"
+    android:layout_weight="1"
+    android:hint="@string/loginLabelNombreUsuario" />
+
+<EditText
+    android:id="@+id/loginInputContrasenna"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_gravity="center_horizontal"
+    android:layout_weight="1"
+    android:ems="10"
+    android:hint="@string/loginLabelContrasenna"
+    android:inputType="textPassword" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="@string/login_checkbox_sesion_activa"
+        android:id="@+id/loginCheckBoxSesion"
+        android:layout_weight="1" />
+
+    <Button
+    android:id="@+id/loginButtonIniciarSesion"
+    style="?android:attr/buttonStyleSmall"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_gravity="center_horizontal"
+    android:layout_weight="1"
+    android:text="@string/loginButtonIniciarSesion"
+    android:theme="@style/buttonTheme"/>
+
+</LinearLayout>

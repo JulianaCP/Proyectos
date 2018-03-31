@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/estado_nuevo_priorizado_popup_Asignados_Eliminar"
+        android:title="@string/estadoNuevoPriorizadoPopup_Asignados_Eliminar"
+        />
+</menu>

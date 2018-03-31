@@ -1,0 +1,136 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".reporteEstadoEditarPrioridadFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="1"
+        android:layout_gravity="right|bottom">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:id="@+id/estadoPriorizadoEditarLinearLayoutFecha"
+            android:layout_weight="0.12">
+
+            <TextView
+                android:layout_gravity="center"
+                android:id="@+id/textView3"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textSize="20sp"
+                android:layout_height="wrap_content"
+                android:text="@string/reporteEstadoNuevoPriorizarDefinirFecha" />
+
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="0dp"
+                android:layout_weight="1.5"
+                android:id="@+id/estadoPriorizadoEditarLabelDate"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"/>
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_gravity="center"
+                android:layout_weight="0.5"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageViwPriorizado"
+                android:src="@drawable/calendar"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/colorPrimary"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="@string/reporteEstadoNuevoPriorizarImportancia"
+                android:textSize="20sp"
+                android:id="@+id/textView6"
+                android:layout_weight="2"/>
+
+            <RadioGroup
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/importanciaReporteAlto"
+                    android:id="@+id/estadoPriorizadoEditarRadioButtonAlto"
+                    android:checked="false" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/importanciaReporteMedio"
+                    android:id="@+id/estadoPriorizadoEditarRadioButtonMedio"
+                    android:checked="false" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/importanciaReporteBajo"
+                    android:id="@+id/estadoPriorizadoEditarRadioButtonBajo"
+                    android:checked="false" />
+            </RadioGroup>
+        </LinearLayout>
+        <View
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/colorPrimary"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="82dp"
+            android:layout_marginTop="8dp">
+
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="@string/buttonAceptar"
+                android:id="@+id/estadoPriorizadoEditarButtonAceptar" />
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="@string/buttonCancelar"
+                android:id="@+id/estadoPriorizadoEditarButtonCancelar" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+    <html ng-app="mantenimientoApp">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="assets/style/css/login.css">
+    <title>Login</title>
+    <link rel="stylesheet" href="lib/Bootstrap/css/bootstrap.min.css"><!--Boostrap..-->
+    <link rel="stylesheet" href="lib/Icons/css/font-awesome.min.css"><!--Iconos..-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <script type="/js/bootstrap.js"></script>
+    <script type="/js/npm.js"></script>
+</head>
+<body>
+    <div class="acomodar">
+        <img  width="250px" top="110px" src="assets/style/img/logoTec.png"/>
+    </div>
+    <div id="loginBody">
+        <div class="thumbnail">
+            <div class="login-page">
+                <div>
+                    <h2 id="fuente">Mantenimiento</h2>
+                </div>
+                <div class="form">
+                    <form class="register-form">
+                        <input type="text" placeholder="name"/>
+                        <input   type="password" placeholder="password"/>
+                        <input type="text"   placeholder="email address"/>
+                        <button >create</button>
+                        <p class="message">Already registered? <a href="#">Sign In</a></p>
+                    </form>
+                    <form class="login-form">
+                        <div ng-controller="SpicyController">
+                            <input type="text" id="email" name="email" placeholder="username"ng-model="username"/>
+                            <input type="password" id="pass" name="pass" placeholder="password" ng-model="password"/>
+                            <button ng-click="jalapenoSpicy()">Login</button>
+                            <p>The food is {{spice}} spicy!</p>
+                        </div>
+                        <div ng-app="mantenimientoApp">
+                            <li><a ng-href="#login">Datos personales</a></li>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="lib/Bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="lib/AngularJS/angular.min.js"></script>
+    <script type="text/javascript" src="lib/AngularJS/angular-route.min.js"></script>
+    <script type="text/javascript" src="lib/AngularJS/angular.js"></script>
+    <script type="text/javascript" src="lib/AngularJS/angular-base64.min.js"></script>
+    <script src="app.js"></script>
+    <script type="text/javascript" src="app/Login/Controller/login.js"></script>
+</body>
+</html>

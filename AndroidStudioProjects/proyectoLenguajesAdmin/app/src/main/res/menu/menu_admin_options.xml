@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+
+        android:id="@+id/itemp_opcion_verUsuarios"
+        android:title="@string/appAdminLabelTituloOpcionMenuUno"
+        app:showAsAction="ifRoom"
+
+        />
+    <item
+        android:id="@+id/itemp_opcion_AgregarProductos"
+        android:title="@string/appAdminLabelTituloOpcionMenuDos"
+        app:showAsAction="ifRoom"
+        />
+</menu>

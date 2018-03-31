@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/reportes_main_popup_terminados_cancelados"
+        android:title="@string/reportesMainPopup_Terminados_cancelados"
+        />
+    <item
+        android:id="@+id/reportes_main_popup_terminados_finalizados"
+        android:title="@string/reportesMainPopup_Terminados_Finalizados"
+        />
+</menu>

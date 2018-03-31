@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="stringPrimerValor">Digite el primer valor</string>
+    <string name="stringSumar">Sumar</string>
+    <string name="stringSegundoValor">Digite el segundo Valor</string>
+    <string name="stringResultado">Resultado:  </string>
+
+
+</resources>

@@ -1,0 +1,114 @@
+<div class="wrapper">
+    <div class="container-fluid">
+        <article class="row" style="font-family: 'Lucida Sans Unicode'">
+            <h2>Listado de enfermedades</h2>
+        </article>
+        <hr style="height: 2px; background-color: #333">
+        <div class="panel panel-default">
+            <div class="panel-body" >
+                <div class="row">
+                    <section style="margin-left: 8px;margin-right: 8px;">
+                        <div style="float: left">
+                            <div style="float: left; margin-left: 50px;margin-top: 20px;">
+                                <section><a data-toggle="modal" data-target="#myModal" style="color: #00733e;">Agregar nueva enfermedad</a></section>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div class="row">
+                    <section style="padding: 20px;">
+                        <table id="myTable" class="table table-bordered">
+                            <thead>
+                            <tr>
+                                <th>Enfermedad</th>
+                                <th>Descripcion</th>
+                                <th>Tratamiento</th>
+                                <th>Opciones</th>
+                            </tr>
+                            </thead>
+                            <tbody style="font-family: 'Lucida Sans Unicode'">
+                            <tr ng-repeat="enfermedad in infermedades" >
+                                <td>{{enfermedad.Enfermedad}}</td>
+                                <td>{{enfermedad.descripcion}}</td>
+                                <td>{{enfermedad.tratamiento}}</td>
+                                <td class="text-center">
+                                    <button class="btn btn-default edit-enfermedad" id="editDatos" data-toggle="modal" data-target="#editFormModal" ng-click="editarEnfermedad(enfermedad)">
+                                        <span class="glyphicon glyphicon-edit" aria-hidden="true"></span></button>
+                                    <button class="btn btn-danger delete-enfermedad"  id="deleteDatos" ng-click="deleteEnfermedad(enfermedad.idEnfermedad)"  ><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="formModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <form method="post">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabelAdd">Modal title</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label>Enfermedad</label>
+                            <input type="text" class="form-control"  id="enfermedad" name="enfermedad">
+                        </div>
+                        <div class="form-group">
+                            <label>Descripcion</label>
+                            <input class="form-control" id="descripcion" name="descripcion">
+
+                        </div>
+                        <div class="form-group">
+                            <label>Tratamiento</label>
+
+                            <input class="form-control"  id="tratamiento"  name="tratamiento">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <input type="submit" class="btn btn-primary" ng-click="setEnfermedades()" id="ins" value="Save">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="editFormModal" tabindex="-1" role="dialog" aria-labelledby="editFormModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <form method="post">
+                    <input type="hidden" id="edit-form-id" name="id">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabelEdit">Modal title</h4>
+                    </div>
+                    <div class="modal-body">
+
+                        <div class="form-group">
+                            <label>Enfermedad</label>
+
+                            <input type="text" class="form-control" name="edit-form-enfermedad" id="edit-form-enfermedad">
+                        </div>
+                        <div class="form-group">
+                            <label>Descripcion</label>
+                            <textarea class="form-control" name="edit-form-descripcion" id="edit-form-descripcion"></textarea>
+
+                        </div>
+                        <div class="form-group">
+                            <label>Tratamiento</label>
+
+                            <textarea class="form-control" name="edit-form-tratamiento" id="edit-form-tratamiento"></textarea>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <input type="submit" class="btn btn-primary"   ng-click="editEnfermedades()" value="Save">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

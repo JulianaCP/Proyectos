@@ -1,0 +1,73 @@
+<div class="container" id="margen">
+    <form class="form-horizontal" ng-submit="crear()">
+        <legend id="tituloDatosUsuario">Crear Usuario</legend>
+        <fieldset>
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="tipoUsuario">Tipo Usuario</label>
+                <div class="col-md-4">
+                    <select ng-model="tipoUsuario" id="tipoUsuario" name="tipoUsuario" class="form-control">
+                        <option value="Profesor" selected="true">Profesor</option>
+                        <option value="Tecnico">Tecnico</option>
+                        <option value="Operador">Operador</option>
+                        <option value="Administrador">Administrador</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="nombre">Nombre</label>
+                <div class="col-md-4">
+                    <input ng-model="nombre" id="nombre" name="nombre" type="text" placeholder="Nombre" class="form-control input-md" required="">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="Apellido1">Primer Apellido</label>
+                <div class="col-md-4">
+                    <input ng-model="Apellido1" id="Apellido1" name="Apellido1" type="text" placeholder="Primer Apellido" class="form-control input-md" required="">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="Apellido2">Segundo Apellido</label>
+                <div class="col-md-4">
+                    <input ng-model="Apellido2" id="Apellido2" name="Apellido2" type="text" placeholder="Segundo Apellido" class="form-control input-md" required="">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="nombreUsuario">Nombre Usuario</label>
+                <div class="col-md-4">
+                    <input ng-model="nombreUsuario" id="nombreUsuario" name="nombreUsuario" type="text" placeholder="nombreUsuario" class="form-control input-md" required="">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="contrasena">Contraseña </label>
+                <div class="col-md-4">
+                    <input ng-model="contrasena" id="contrasena" name="contrasena" type="password" placeholder="Contraseña " class="form-control input-md" required="">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="confirmarContrasena">Confirmar Contraseña </label>
+                <div class="col-md-4">
+                    <input ng-model="confirmarContrasena" id="confirmarContrasena" name="confirmarContrasena" type="password" placeholder="Confirmar contraseña " class="form-control input-md" required="">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="telefono">Telefono</label>
+                <div class="col-md-4">
+                    <input ng-model="telefono"  id="telefono" name="telefono" type="text" placeholder="Telefono " class="form-control input-md" required="">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="correo">Correo</label>
+                <div class="col-md-4">
+                    <input ng-model="correo" id="correo" name="correo" type="text" placeholder="Correo " class="form-control input-md" required="">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="buttonDatos"></label>
+                <div class="col-md-8">
+                    <button type="submit" id="buttonDatos" name="crear" class="btn btn-success buttonDatos">Crear</button>
+                    <a href="#/user/home" id="cancelar" class="btn btn-danger buttonDatos">Cancelar</a>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+</div>
