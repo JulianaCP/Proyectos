@@ -1,0 +1,10 @@
+body{
+    background-color: gray;
+}
+#marco{
+    background-color: white;
+    margin: 50px 500px 50px 500px;  
+    padding: 30px 40px;
+    border: 2px solid black;
+    border-radius: 40px;
+}

@@ -1,0 +1,649 @@
+
+/*
+
+compilacion y ejecucion
+
+
+compilacion: primero compila todas las declaraciones de variables
+ejecucion: le asigna a las variables declaradas les asigna las funciones
+
+*/
+
+
+
+//FUNCTION EXPRESSION
+
+
+
+
+	//-->Anonima
+
+
+
+//BEST PRACTICE:  ponerle nombre a todas las funciones
+
+var name = function(){
+	
+}
+
+//investigar getHouse ...... scope ....... prototipado en los objetos
+
+	//---> named
+
+var name = function name(){
+	
+}
+
+/*
+
+var name1 = function name2(){
+	
+}
+
+*/
+
+/////////////////////
+
+
+//-->FUNCTION DECLARATIONS
+
+
+function name(){
+	
+}
+
+...(function()){
+
+}
+
+
+array.forEach(function arrayIteration()){
+
+}
+
+
+
+
+
+
+
+
+
+//parentesis encargados de ejecutar las funciones
+
+/*
+si se llama name muestra la funcion si se llama name() pone los resultados de la funcion[en este caso el console]
+
+*/
+
+
+
+
+/////////////////////////////////////////////////////
+//IIFE
+
+//para ejecutarse ocupa llamarse
+function iife(){
+	console.log('I am an IIFE')
+}
+
+
+//iife se ejecutar de una sola vez cuando se ejecuta en codigo [se ejecuta en el momento que llega al codigo]
+//ejemplo
+(function iife(){
+	console.log('I am an IIFE')
+})()
+
+// puede no llevar nombre
+(function(){
+	console.log('I am an IIFE')
+})()
+//lo que se genere en la funcion no va ser global
+
+/////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+////////////////////////////////////////////////////////////////////////////////
+
+// patrones de diseño
+
+/*
+
+
+	solucion a un problema general o repetitivo
+
+	Ejemplo: Singlenton
+
+*/
+
+
+
+/*
+
+patrones de javascript
+
+*/
+
+
+
+
+//   module pattern
+
+//decide que pueden usar los usuarios que estan afuera
+
+
+
+// sin modulo patter
+
+
+/*
+
+function database(){
+
+	var db;
+	function _connect(){
+		...
+			db={...};
+		...
+		console.log('connection to DB!!')
+
+	}
+	function _dropDB(){ // tiene acceso a funciones que son privadas (funciones que no se quiere que todo el mundo tenga acceso)
+
+	}
+
+	function execQuery(query){
+		_connect();
+		db.exec(query);
+	}	
+
+
+}
+
+*/
+
+
+
+
+// con module pattern
+
+
+function database(){
+
+	var db;
+	function _connect(){
+		...
+			db={...};
+		...
+		console.log('connection to DB!!')
+
+	}
+	function _dropDB(){
+
+	}
+	return{  // esto es el modulo pattern 
+		function execQuery(query){
+			_connect();
+			db.exec(query);
+		}	
+	};
+
+}
+
+var connectToDB = database();  // jalas las funciones y las variables
+							// con el module pattern solo va retornar la funcion
+
+
+/*
+es mas o menos lo que pasa al igualar la variable a la funcion obtenido con el return
+
+var connectToDB = {  ¿
+		execQuery : execQuery
+	
+	}
+*/
+var users = connectToDB.execQuery('select * from users'); // accede a la funcion obtenida 
+
+
+
+
+
+
+
+
+
+// revele module pattern
+
+/*
+
+lo que debe retornar es una funcion o funciones 
+
+function database(){
+
+	var db;
+
+
+	function _connect(){
+		...
+			db={...};
+		...
+		console.log('connection to DB!!')
+
+	}
+
+	function execQuery(query){
+		_connect();
+		db.exec(query);
+	},
+
+	function _dropDB(){
+
+	}
+	return{  // esto es el modulo pattern 
+		execQuery : execQuery
+	
+	};
+
+}
+
+*/
+
+
+
+
+
+
+
+///////////////////////////////////////////////////////
+
+
+//contructores
+
+
+function Casa() {
+	this.techo = 'teja';
+	this.puertas = 0;
+}
+
+//diferencia entre una funcion y un contructor solamente se observa cuando se llama a la funcion
+
+
+var cadaBerrocal = new Casa();
+
+
+
+///////////////////////
+/*
+	crea problemas al intentar poner nuevos atributos a la instancia (del objeto establecido) x lo que 
+	hay que crear la funcion casaNueva para pasarlo de referencia a tipo primitivo
+	para que no modifique a la estructura....
+
+
+	el problema que proboca es que al intentar modificar la estructura del objeto crea problemas creo q xq debe cambiarlas todas (no se)
+
+*/
+
+/*
+casa = {
+
+	techo : 'teja',
+	puertas : 0
+}
+
+function nuevaCasa(casa){
+	return{
+		techo: casa.techo,
+		puertas: casa.puertas
+	};
+}
+
+casa2 = nuevaCasa(casa);
+casa2.ventanas = '5';
+
+*/
+
+
+
+
+
+
+///////////////////////////////////////////////////////////////////////
+
+//otro jueves
+
+/*
+	nodeJS (backend) instalar
+
+	npm install -g
+*/
+
+
+
+
+//recordatorio
+
+//constructor
+
+
+/*
+function Persona(firstName,lastName,colorOjos){
+	this.firstName = firstName;
+	this.lastName = lastName
+	this.colorOjos = colorOjos;
+	this.extremidades = 4;
+	this.name = function getName(){
+		return this.firstName + ' ' + this.lastName;
+	};
+}
+
+
+*/
+/*
+//instancias
+var persona1 = new Persona('Nombre','Apellido','negros');
+var persona2 = new Persona('Nombre2','Apellido2','color2');
+
+/*
+
+console.log(Persona2.name());
+console.log(Persona2.colorOjos);
+
+*/
+
+/*
+
+console.log(Persona1.nacionalidad); // no tiene
+console.log(Persona2.nacionalidad); // no tiene
+Persona.prototype.nacionalidad = 'Costa Rica';  // se le agrega
+console.log(Persona2.nacionalidad);  //se le agrego (ahora si tiene)
+console.log(Persona1.nacionalidad); //se le agrego (ahora si tiene)
+
+
+*/
+
+
+function Persona(firstName,lastName,colorOjos){
+	this.firstName = firstName;
+	this.lastName = lastName
+	this.colorOjos = colorOjos;
+	this.extremidades = 4;
+	this.name = function getName(){
+		return this.firstName + ' ' + this.lastName;
+	};
+}
+
+var persona1 = new Persona('Nombre','Apellido','negros');
+var persona2 = new Persona('Nombre2','Apellido2','color2');
+
+
+console.log(persona1.nacionalidad); // no tiene
+console.log(persona2.nacionalidad); // no tiene
+Persona.prototype.nacionalidad = 'Costa Rica';  // se le agrega
+console.log(persona2.nacionalidad);  //se le agrego (ahora si tiene)
+console.log(persona1.nacionalidad); //se le agrego (ahora si tiene)
+
+
+persona1.nacionalidad = 'Pais'; // primero analiza la clase (local)... si no esta definida
+								//se busca en el prototype (en cierta parte es el padre)
+
+/*
+
+Persona.prototype.toString = this.toString = function metodo(){
+		return 'Nombre: ' + this.firstName + ' ' + this.lastName + '  Color Ojos: ' + this.colorOjos + ' '
+		'  extremidades: ' + this.extremidades;
+};
+
+*/
+
+
+Persona.prototype.toString = function getToString(){
+		return 'Nombre: ' + this.firstName + ' ' + this.lastName + '  Color Ojos: ' + this.colorOjos + ' '
+		'  extremidades: ' + this.extremidades;
+};
+
+
+
+
+
+
+/* en java los hijos obtienen todos los comporentes , atributos, variables de los padres
+
+en javascript si el atributo al que se quiere acceder se busca en la clase (componentes que tiene el hijo)
+si lo encuentra lo agarra... sino va a buscar al padre [en este ejemplo el prototype]
+
+
+
+*/
+
+
+
+
+/*
+
+como funciona el delete
+
+
+
+
+*/
+
+
+
+var a = 'asds';
+var b = {a: 'dsd'};
+
+delete b.a;  // se ejecuta
+//que pasa si se quiere ejecutar
+
+b.a  // undefined
+
+
+b  // object {}
+
+
+
+//SOLO BORRA PROPIEDADES DE OBJETOS
+//NO BORRAR VARIABLES
+
+delete a  // false   [no se puede borrar]
+
+delete b  // false  [no se puede borrar]
+
+
+
+b.casa = 'mi casa'
+delete b   //false   [SE debe definir que propiedad del objeto se quiere borrar] (no se puede borrar)
+
+
+
+
+
+
+
+/////////////////
+
+
+function Persona(firstName,lastName,colorOjos){  //si no llega algun valor el valor es undefined
+	this.firstName = firstName;
+	this.lastName = lastName
+	if(colorOjos == undefined){ // si no tiene un valor
+		this.colorOjos = colorOjos; // best practice: si se hace un if... es recomendabla que tenga un else
+	}
+	else{
+		this.colorOjos = 'negros';
+	}
+	this.colorOjos = colorOjos;
+	this.extremidades = 4;
+	this.name = function getName(){
+		return this.firstName + ' ' + this.lastName;
+	};
+}
+
+var persona = new Persona('Daniel','Berrocal'); // sin color
+
+
+var persona2 = new Persona('Walter','Chavarria','Cafes'); // sin color
+
+
+// ó
+
+function Persona(firstName,lastName,colorOjos){  //si no llega algun valor el valor es undefined
+	this.firstName = firstName;
+	this.lastName = lastName
+	if(colorOjos){ // si tiene un valor
+		this.colorOjos = colorOjos; // best practice: si se hace un if... es recomendabla que tenga un else
+	}
+	else{
+		this.colorOjos = 'negros';
+	}
+	this.colorOjos = colorOjos;
+	this.extremidades = 4;
+	this.name = function getName(){
+		return this.firstName + ' ' + this.lastName;
+	};
+}
+
+var persona = new Persona('Daniel','Berrocal',null); // sin color
+
+
+var persona2 = new Persona('Walter','Chavarria','Cafes'); // sin color
+
+///////////////
+
+
+
+
+
+
+
+
+
+
+///////////////////////////////////////
+
+// ternaria
+
+
+function Persona(firstName,lastName,colorOjos){  //si no llega algun valor el valor es undefined
+	this.firstName = firstName;
+	this.lastName = lastName
+	this.colorOjos = colorOjos || 'Negro'; // si el primero es un valor definisdo (que sirve [tiene valor]) escoge
+										//el primero.. sino hace el segundo
+	this.colorOjos = colorOjos;
+	this.extremidades = 4;
+	this.name = function getName(){
+		return this.firstName + ' ' + this.lastName;
+	};
+}
+
+
+
+
+
+
+
+
+
+/*
+
+//clouchor
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+funcion interna o que esta alojada dentro de otro funcion donde se utilizan las variables de la funcion externa
+
+es cuando se utiliza desde afuera de las funciones se utilizan valores de la funcion externa
+
+
+dentro de la externa hay una funcion interna que utiliza valores de la externa
+
+
+
+*/
+
+var a = function(){
+	var casa = 'mi casa';
+	var foo = function(num){
+		return casa + '2';
+	};
+	return foo;
+}
+
+a()() // para acceder a la inf del de adentro y enviar valor
+
+
+/*
+es como
+
+*/
+
+
+var b = a(variable); // variable si se desea enviar
+
+/*
+var b = function(num){
+		return casa + '2';
+	};
+
+
+
+*/
+
+
+
+b(otraVar) //es la variable del de addentro [foo]
+
+
+
+
+
+
+
+
+
+////////
+
+//scope  investigar tambien (y el de arriba)
+
+
+
+
+
+//varios funciones en el retorno
+
+var a = function(){
+	var casa = 'mi casa';
+	return{
+		
+		getID: function(num){
+			return casa + '2';
+		},
+		b: function(num){
+			return casa + '2';
+		},
+	}
+}
+
+
+a().getID()

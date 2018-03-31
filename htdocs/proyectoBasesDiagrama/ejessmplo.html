@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<style type="text/css">
+  
+  .diagramaBaseCSS{
+    background-color: white; 
+    border: solid 1px black; 
+    width: 100%; 
+    height: 700px;
+  }
+
+
+</style>
+
+<meta charset="UTF-8">
+<script src="go.js"></script>
+
+<script>
+  function cargarTabla() {
+    
+    var $ = go.GraphObject.make;  
+    diagramaRelacional =
+      $(go.Diagram, "diagramaBaseDatos",
+        {
+          initialContentAlignment: go.Spot.Center,
+          allowDelete: false,
+          allowCopy: false,
+          layout: $(go.ForceDirectedLayout),
+          "undoManager.isEnabled": true
+        });
+   
+    var marcoAzulTabla = $(go.Brush, "Linear", { 0: "rgb(150, 150, 250)", 0.5: "rgb(86, 86, 186)", 1: "rgb(86, 86, 186)" });
+    var marcoVerdeTabla = $(go.Brush, "Linear", { 0: "rgb(158, 209, 159)", 1: "rgb(67, 101, 56)" });
+    var marcoRojoTabla = $(go.Brush, "Linear", { 0: "rgb(206, 106, 100)", 1: "rgb(180, 56, 50)" });
+    var marcoAmarilloTabla = $(go.Brush, "Linear", { 0: "rgb(254, 221, 50)", 1: "rgb(254, 182, 50)" });
+    var graduacionLuz = $(go.Brush, "Linear", { 1: "#E6E6FA", 0: "#FFFAF0" });
+    
+    var objetosModelo =
+      $(go.Panel, "Horizontal",
+        $(go.Shape,
+          { desiredSize: new go.Size(10, 10) },
+          new go.Binding("figure", "figure"),
+          new go.Binding("fill", "color")),
+        $(go.TextBlock,
+          { stroke: "#333333",
+            font: "bold 14px sans-serif" },
+          new go.Binding("text", "name"))
+      );
+    
+    diagramaRelacional.nodeTemplate =
+      $(go.Node, "Auto", 
+        { selectionAdorned: true,
+          resizable: true,
+          layoutConditions: go.Part.LayoutStandard & ~go.Part.LayoutNodeSized,
+          fromSpot: go.Spot.AllSides,
+          toSpot: go.Spot.AllSides,
+          isShadowed: true,
+          shadowColor: "#C5C1AA" },
+        new go.Binding("location", "location").makeTwoWay(),
+        
+        $(go.Shape, "Rectangle",
+          { fill: graduacionLuz, stroke: "#756875", strokeWidth: 3 }),
+        $(go.Panel, "Table",
+          { margin: 8, stretch: go.GraphObject.Fill },
+          $(go.RowColumnDefinition, { row: 0, sizing: go.RowColumnDefinition.None }),
+          
+          $(go.TextBlock,
+            {
+              row: 0, alignment: go.Spot.Center,
+              margin: new go.Margin(0, 14, 0, 2),  
+              font: "bold 16px sans-serif"
+            },
+            new go.Binding("text", "key")),
+          
+          $(go.Panel, "Vertical",
+            {
+              name: "LIST",
+              row: 1,
+              padding: 3,
+              alignment: go.Spot.TopLeft,
+              defaultAlignment: go.Spot.Left,
+              stretch: go.GraphObject.Horizontal,
+              itemTemplate: objetosModelo
+            },
+            new go.Binding("itemArray", "items"))
+        )  
+      );  
+    
+    diagramaRelacional.linkTemplate =
+      $(go.Link,  
+        {
+          selectionAdorned: true,
+          layerName: "Foreground",
+          reshapable: true,
+          routing: go.Link.AvoidsNodes,
+          corner: 5,
+          curve: go.Link.JumpOver
+        },
+        $(go.Shape, 
+          { stroke: "#303B45", strokeWidth: 2.5 }),
+        $(go.TextBlock,  
+          {
+            textAlign: "center",
+            font: "bold 14px sans-serif",
+            stroke: "#1967B3",
+            segmentIndex: 0,
+            segmentOffset: new go.Point(NaN, NaN),
+            segmentOrientation: go.Link.OrientUpright
+          },
+          new go.Binding("text", "text")),
+        $(go.TextBlock,  
+          {
+            textAlign: "center",
+            font: "bold 14px sans-serif",
+            stroke: "#1967B3",
+            segmentIndex: -1,
+            segmentOffset: new go.Point(NaN, NaN),
+            segmentOrientation: go.Link.OrientUpright
+          },
+          new go.Binding("text", "toText"))
+      );
+    
+    var listaTablas = [
+      { key: "Products",
+        items: [ { name: "ProductID", iskey: true, figure: "Decision", color: marcoAmarilloTabla },
+                 { name: "ProductName", iskey: false, figure: "Cube1", color: marcoAzulTabla },
+                 { name: "SupplierID", iskey: false, figure: "Decision", color: "purple" },
+                 { name: "CategoryID", iskey: false, figure: "Decision", color: "purple" } ] },
+      { key: "Suppliers",
+        items: [ { name: "SupplierID", iskey: true, figure: "Decision", color: marcoAmarilloTabla },
+                 { name: "CompanyName", iskey: false, figure: "Cube1", color: marcoAzulTabla },
+                 { name: "ContactName", iskey: false, figure: "Cube1", color: marcoAzulTabla },
+                 { name: "Address", iskey: false, figure: "Cube1", color: marcoAzulTabla } ] },
+      { key: "Categories",
+        items: [ { name: "CategoryID", iskey: true, figure: "Decision", color: marcoAmarilloTabla },
+                 { name: "CategoryName", iskey: false, figure: "Cube1", color: marcoAzulTabla },
+                 { name: "Description", iskey: false, figure: "Cube1", color: marcoAzulTabla },
+                 { name: "Picture", iskey: false, figure: "TriangleUp", color: marcoRojoTabla } ] },
+      { key: "Order Details",
+        items: [ { name: "OrderID", iskey: true, figure: "Decision", color: marcoAmarilloTabla },
+                 { name: "ProductID", iskey: true, figure: "Decision", color: marcoAmarilloTabla },
+                 { name: "UnitPrice", iskey: false, figure: "MagneticData", color: marcoVerdeTabla },
+                 { name: "Quantity", iskey: false, figure: "MagneticData", color: marcoVerdeTabla },
+                 { name: "Discount", iskey: false, figure: "MagneticData", color: marcoVerdeTabla } ] },
+    ];
+    var listaRelacionesTablas = [
+      { from: "Products", to: "Suppliers"},
+      { from: "Products", to: "Categories"},
+      { from: "Order Details", to: "Products"}
+    ];
+    diagramaRelacional.model = new go.GraphLinksModel(listaTablas, listaRelacionesTablas);
+  }
+</script>
+</head>
+<body onload="cargarTabla()">
+
+  <div id="diagramaBaseDatos" class="diagramaBaseCSS"></div>
+  
+
+</body>
+</html>

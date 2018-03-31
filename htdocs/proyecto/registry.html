@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset = "UTF-8">
+		<title>RPoints</title>
+		<link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+
+		<style type="text/css">
+
+		.navImage {
+				margin: 1%;
+				padding-left: 45%;
+			}
+		#recuadro{
+			padding-top: 50%;
+			margin-top: 50%;
+		}
+		#tituloRegistro{
+			
+			text-align: center;
+			margin-top: 5%;
+			margin-bottom: 5%;
+		}
+
+		#subTituloRegistro{
+			margin-bottom: 5%;
+			text-align: center;
+			color: #4458BA;
+			font-family: fantasy;
+		}
+
+		.informacionObligatoria{
+			color: red;
+		}
+		#customerInformation{
+			display:none;
+		}	
+		#commerceInformation{
+			display:none;
+		}	
+
+		#inputFile{
+			padding-left: 50%;
+		}
+
+		#acceptButton{
+			padding-left: 50%;
+		}
+
+		</style>
+
+
+	</head>
+	<body>
+		<header>
+			
+			<nav>
+				<ul id="navigation" class="nav nav-pills nav-justified bg-primary" id="flotar">
+					<li role="presentation"><img src="C:\xampp\htdocs\proyecto\logo.png" class= "navImage img-rounded "></li>
+				</ul>
+			</nav>
+
+		</header>
+
+		<main>
+
+
+
+			<script>
+				function check() 
+				{
+				    document.getElementById("customerInformation").style.display = "block";
+				    document.getElementById("commerceInformation").style.display = "none";
+				}
+				function uncheck() 
+				{
+				    document.getElementById("customerInformation").style.display = "none";
+				    document.getElementById("commerceInformation").style.display = "block";
+				}
+
+				$("#input-repl-1a").fileinput({
+				    uploadUrl: "/file-upload-batch/2",
+				    autoReplace: true,
+				    overwriteInitial: true,
+				    showUploadedThumbs: false,
+				    maxFileCount: 1,
+				    initialPreview: [
+				        "<img style='height:160px' src='http://lorempixel.com/200/150/nature/1'>",
+				    ],
+				    initialCaption: 'Initial-Image.jpg',
+				    initialPreviewShowDelete: false,
+				    showRemove: false,
+				    showClose: false,
+				    layoutTemplates: {actionDelete: ''}, // disable thumbnail deletion
+				    allowedFileExtensions: ["jpg", "png", "gif"]
+				});
+
+
+			</script>
+
+			<div class="container">
+				<h1 id="tituloRegistro"><strong>Registry</strong></h1>
+				<h3  id="subTituloRegistro">Enter Data to Create Account</h3>
+			 	<div class="panel panel-default">
+			  		<div class="panel-body">
+
+						<form class="form-horizontal" role="form">
+							<fieldset class="scheduler-border">
+								<legend>Personal Information</legend><br>
+								<div class="form-group">
+
+									<label for="nombreCrearCuenta" class="control-label col-sm-2" >Name: <strong class="informacionObligatoria">*</strong>  </label> 
+									<div class="col-xs-4">
+									    <input type="text" class="form-control"  placeholder="Enter your Name">
+									</div>
+
+						    	</div>
+
+
+						    	<div class="form-group">
+
+									<label for="nombreCrearCuenta" class="control-label col-sm-2" >Surname:<strong class="informacionObligatoria">*</strong></label>
+									<div class="col-xs-4">
+									    <input type="text" class="form-control"  placeholder="Enter your First Surname">
+									</div>
+
+						    	</div>
+
+						    	<div class="form-group">
+
+									<label for="apellido2CrearCuenta" class="control-label col-sm-2" >Surname:<strong class="informacionObligatoria">*</strong></label>
+									<div class="col-xs-4">
+									    <input type="text" class="form-control" placeholder="Enter your First Surname">
+									</div>
+
+						    	</div>
+
+						    	<div class="form-group">
+
+									<label for="passwordCrearCuenta" class="control-label col-sm-2" >Email:<strong class="informacionObligatoria">*</strong></label>
+									<div class="col-xs-4">
+									    <input type="text" class="form-control"  placeholder="Enter your Email">
+									</div>
+
+						    	</div>
+
+						    	<div class="form-group">
+
+									<label for="passwordCrearCuenta" class="control-label col-sm-2" >password:<strong class="informacionObligatoria">*</strong> </label>
+									<div class="col-xs-4">
+									    <input type="text" class="form-control" placeholder="Enter your Password">
+									</div>
+
+						    	</div>
+
+						    	<div class="form-group">
+
+									<label for="passwordCrearCuenta" class="control-label col-sm-2" >Confirm password:<strong class="informacionObligatoria">*</strong> </label>
+									<div class="col-xs-4">
+									    <input type="text" class="form-control"  placeholder="Enter your Password">
+									</div>
+
+						    	</div><br>
+
+
+						    	<div class="form-group">
+									<label for="typeOfUser" class="control-label col-sm-2" >Select a User Type:<strong class="informacionObligatoria">*</strong> </label><br>
+									<div class="col-xs-2">
+		
+										<input onclick="check()" type="radio" name="typeUser" id="radioButtonClient"><strong>		Customer<strong><br>
+	  									<input onclick="uncheck()" type="radio" name="typeUser" id="radioButtonCommerce">		Commerce<br><br>
+
+	  																		<p id = "pa" style="display:none">Hola</p>
+																			<p id = "pa2" style="display:none">Hola 2</p>
+									</div>
+						    	</div>
+
+							</fieldset>
+						    
+							<div id="customerInformation">
+								<fieldset class="scheduler-border" >
+									<legend>Customer information</legend><br>
+
+
+							    	<div class="form-group">
+
+										<label for="idCrearCuenta" class="control-label col-sm-2" >Identification:<strong class="informacionObligatoria">*</strong></label>
+										<div class="col-xs-4">
+										    <input type="text" class="form-control"  placeholder="Enter your identification">
+										</div>
+
+							    	</div><br>
+
+							    	<div class="form-group">
+										<label for="genderOfUser" class="control-label col-sm-2" >Select a Gender:<strong class="informacionObligatoria">*</strong> </label>
+										<div class="col-xs-2">		
+											  <input type="radio" name="gender" value="male" checked> Male<br>
+											  <input type="radio" name="gender" value="female"> Female<br><br>
+
+										</div>
+							    	</div>
+
+
+							    	<div class="form-group">
+
+										<label for="idCrearCuenta" class="control-label col-sm-2" >Fecha de nacimiento:<strong class="informacionObligatoria">*</strong></label>
+
+
+										<div class="col-xs-2">
+
+											<input class="form-control" placeholder="Day" type="text" size="3" maxlength="2" id="fecha_dia" name="fecha_dia" />
+																					
+										</div>
+										<label class="control-label col-sm-1" >de</label>
+										<div class="col-xs-2">
+											
+											<select class="selectpicker form-control" id="fecha_mes" name="fecha_mes" >
+											    <option value="1">Enero</option>
+											    <option value="2">Febrero</option>
+											    <option value="3">Marzo</option>
+											    <option value="4">Abril</option>
+											    <option value="5">Mayo</option>
+											    <option value="6">Junio</option>
+											    <option value="7">Julio</option>
+											    <option value="8">Agosto</option>
+											    <option value="9">Septiembre</option>
+											    <option value="10">Octubre</option>
+											    <option value="11">Noviembre</option>
+											    <option value="12">Diciembre</option>
+											</select>
+											
+											
+										</div>
+										<label class="control-label col-sm-1" >de</label>
+										<div class="col-xs-2">
+
+											<input class="form-control" placeholder="Year" type="text" size="3" maxlength="4" id="fecha_ano" name="fecha_ano" />
+																					
+										</div>
+							    	</div><br>
+
+								</fieldset>	
+
+							</div>
+							
+
+							<div id="commerceInformation">
+								<fieldset class="scheduler-border" >
+									<legend>Commerce information</legend><br>
+
+							    	<div class="form-group">
+
+										<label for="identificationCommerceCrearCuenta" class="control-label col-sm-2" >Identification:<strong class="informacionObligatoria">*</strong> </label>
+										<div class="col-xs-4">
+										    <input type="text" class="form-control" placeholder="Format: #-###-######" maxlength="12">
+										</div>
+
+							    	</div>
+
+							    	<div class="form-group">
+
+										<label for="PhoneCommerceCrearCuenta" class="control-label col-sm-2" >Phone number:<strong class="informacionObligatoria">*</strong> </label>
+										<div class="col-xs-4">
+										    <input type="text" class="form-control" placeholder="Format: ####-##-##" maxlength="">
+										</div>
+
+							    	</div><br>
+							    	<div class="form-group">
+							    		
+										<label for="logoCommerceCrearCuenta" class="control-label col-sm-2" >Insert the logo: </label><br><br>
+										
+										<div class="col-xs-5">
+										    <input id="inputFile" name="inputdim1[]" type="file" multiple class="file-loading" accept="image/*">
+										</div>
+							    	</div><br><br>
+
+								    <div class="form-group">
+								        <label class="control-label col-xs-2">Description:</label>
+								        <div class="col-xs-5">
+								            <textarea rows="3" class="form-control" placeholder="Insert the Description of the Commerce"></textarea>
+								        </div>
+								    </div>
+
+								</fieldset>	
+
+							</div><br><br><br>
+
+							<div class="container" id="acceptButton">
+							  <input type="submit" class="btn btn-primary btn-lg" value="Sign in">
+							</div>
+
+						</form>
+
+
+
+			  		</div>
+				</div>
+			</div>
+				
+
+
+		</main>
+
+
+
+
+
+
+
+	</body>
+</html>
